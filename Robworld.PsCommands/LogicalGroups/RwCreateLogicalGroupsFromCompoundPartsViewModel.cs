@@ -1,4 +1,5 @@
-﻿using EngineeringInternalExtension.ModelObjects;
+﻿//using Engineering.ModelObjects;
+using EngineeringInternalExtension.ModelObjects;
 using Robworld.PsPublicLibrary.Mvvm;
 using Robworld.PsPublicLibrary.Utilities;
 using System;
@@ -282,6 +283,8 @@ namespace Robworld.PsCommands.LogicalGroups
             ITxPlanningObject planningObject = component.PlanningRepresentation;
             if (planningObject is ITxPlanningVariantSetAssignable variantSetAssignable && component.Visibility != TxDisplayableObjectVisibility.CannotBeDisplayed)
             {
+                //Needs a using Engineering.ModelObjects; beginning with V15.1
+                //Needs a using EngineeringInternalExtension.ModelObjects; for V15.0 and lower
                 ITxPlanningVariantSet variantSet = variantSetAssignable.GetVariantSet();
                 if (variantSet != null)
                 {
