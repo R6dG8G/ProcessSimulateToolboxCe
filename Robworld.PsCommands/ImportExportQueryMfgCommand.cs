@@ -3,6 +3,9 @@ using Tecnomatix.Engineering;
 
 namespace Robworld.PsCommands
 {
+    /// <summary>
+    /// Mfg import, export and query command class
+    /// </summary>
     public class ImportExportQueryMfgCommand : TxCompoundButtonCommand
     {
         #region Fields
@@ -14,10 +17,32 @@ namespace Robworld.PsCommands
         /// <summary>
         /// Get the Category under which the command appears
         /// </summary>
-        public override string Category
-        {
-            get { return "Robworld GmbH & Co. KG"; }
-        }
+        public override string Category => "Robworld GmbH & Co. KG";
+
+        /// <summary>
+        /// Get a short description of the command
+        /// </summary>
+        public override string Description => "Tools for Mfg features";
+
+        /// <summary>
+        /// Shows the tooltip of the command
+        /// </summary>
+        public override string Tooltip => "Tools for Mfg features";
+
+        /// <summary>
+        /// Get the name of the command
+        /// </summary>
+        public override string Name => "Mfg import/export/query";
+
+        /// <summary>
+        /// Get the 16x16 bitmap of the command
+        /// </summary>
+        public override string Bitmap => "Images.Commands.MfgExport16x16.bmp";
+
+        /// <summary>
+        /// Get the 32x32 bitmap of the command
+        /// </summary>
+        public override string LargeBitmap => "Images.Commands.MfgExport32x32.png";
 
         /// <summary>
         /// Get the default button of the compound button command
@@ -25,30 +50,6 @@ namespace Robworld.PsCommands
         public override ITxCompoundButtonElement DefaultElement
         {
             get { return defaultElement; }
-        }
-
-        /// <summary>
-        /// Get the name of the command
-        /// </summary>
-        public override string Name
-        {
-            get { return "Mfg import/export/query"; }
-        }
-
-        /// <summary>
-        /// Get the 16x16 bitmap of the command
-        /// </summary>
-        public override string Bitmap
-        {
-            get { return "Images.Commands.MfgExport16x16.bmp"; }
-        }
-
-        /// <summary>
-        /// Get the 32x32 bitmap of the command
-        /// </summary>
-        public override string LargeBitmap
-        {
-            get { return "Images.Commands.MfgExport32x32.png"; }
         }
 
         /// <summary>

@@ -9,57 +9,39 @@ namespace Robworld.PsCommands
     public class OpenMDDCommand : TxButtonCommand
     {
         #region Fields
-        private RwSingleRobotCommandEnabler enabler;
+        private readonly RwSingleRobotCommandEnabler enabler;
         #endregion
 
         #region Properties
         /// <summary>
         /// Get the Category under which the command appears
         /// </summary>
-        public override string Category
-        {
-            get { return "Robworld GmbH & Co. KG"; }
-        }
+        public override string Category => "Robworld GmbH & Co. KG";
 
         /// <summary>
         /// Get a short description of the command
         /// </summary>
-        public override string Description
-        {
-            get { return "Open the machine data directory of the selected robot"; }
-        }
+        public override string Description => "Open the machine data directory of the selected robot";
 
         /// <summary>
         /// Shows the tooltip of the command
         /// </summary>
-        public override string Tooltip
-        {
-            get { return "Open the machine data directory of the selected robot"; }
-        }
+        public override string Tooltip => "Open the machine data directory of the selected robot";
 
         /// <summary>
         /// Get the name of the command
         /// </summary>
-        public override string Name
-        {
-            get { return "Open MDD"; }
-        }
+        public override string Name => "Open MDD";
 
         /// <summary>
         /// Get the 16x16 bitmap of the command
         /// </summary>
-        public override string Bitmap
-        {
-            get { return "Images.Commands.OpenMDD16x16.bmp"; }
-        }
-        
+        public override string Bitmap => "Images.Commands.OpenMDD16x16.bmp";
+
         /// <summary>
         /// Get the 32x32 bitmap of the command
         /// </summary>
-        public override string LargeBitmap
-        {
-            get { return "Images.Commands.OpenMDD32x32.png"; }
-        }
+        public override string LargeBitmap => "Images.Commands.OpenMDD32x32.png";
 
         /// <summary>
         /// Get the command enabler

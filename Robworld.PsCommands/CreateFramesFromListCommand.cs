@@ -9,49 +9,34 @@ namespace Robworld.PsCommands
     public class CreateFramesFromListCommand : TxButtonCommand
     {
         #region Fields
-        private RwAlwaysTrueCommandEnabler enabler;
+        private readonly RwAlwaysTrueCommandEnabler enabler;
         #endregion
 
         #region Properties
         /// <summary>
-        /// Get the name of the command
-        /// </summary>
-        public override string Name
-        {
-            get { return "Create frames from list"; }
-        }
-
-        /// <summary>
         /// Get the Category under which the command appears
         /// </summary>
-        public override string Category
-        {
-            get { return "Robworld GmbH & Co. KG"; }
-        }
+        public override string Category => "Robworld GmbH & Co. KG";
 
         /// <summary>
         /// Get the description of the command
         /// </summary>
-        public override string Description
-        {
-            get { return "Create frames from a list"; }
-        }
+        public override string Description => "Create frames from a list";
 
         /// <summary>
         /// Shows the tooltip of the command
         /// </summary>
-        public override string Tooltip
-        {
-            get { return "Create frames from a list"; }
-        }
+        public override string Tooltip => "Create frames from a list";
+
+        /// <summary>
+        /// Get the name of the command
+        /// </summary>
+        public override string Name => "Create frames from list";
 
         /// <summary>
         /// Get the 16x16 bitmap of the command
         /// </summary>
-        public override string Bitmap
-        {
-            get { return "Images.Commands.CreateFramesFromList16x16.bmp"; }
-        }
+        public override string Bitmap => "Images.Commands.CreateFramesFromList16x16.bmp";
 
         /// <summary>
         /// Get the 32x32 bitmap of the command

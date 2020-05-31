@@ -3,6 +3,9 @@ using Tecnomatix.Engineering;
 
 namespace Robworld.PsCommands
 {
+    /// <summary>
+    /// Logical groups from compound parts command class
+    /// </summary>
     public class CreateLogicalGroupsFromPartsCommand : TxButtonCommand
     {
         #region Fields
@@ -11,52 +14,34 @@ namespace Robworld.PsCommands
 
         #region Properties
         /// <summary>
-        /// Get the name of the command
-        /// </summary>
-        public override string Name
-        {
-            get { return "Create logical part groups"; }
-        }
-
-        /// <summary>
         /// Get the Category under which the command appears
         /// </summary>
-        public override string Category
-        {
-            get { return "Robworld GmbH & Co. KG"; }
-        }
+        public override string Category => "Robworld GmbH & Co. KG";
 
         /// <summary>
         /// Get the description of the command
         /// </summary>
-        public override string Description
-        {
-            get { return "Create logical groups from compound parts based on variant names or prototype names"; }
-        }
+        public override string Description => "Create logical groups from compound parts based on variant names or prototype names";
 
         /// <summary>
         /// Shows the tooltip of the command
         /// </summary>
-        public override string Tooltip
-        {
-            get { return "Create logical groups from compound parts based on variant names or prototype names"; }
-        }
+        public override string Tooltip => "Create logical groups from compound parts based on variant names or prototype names";
+
+        /// <summary>
+        /// Get the name of the command
+        /// </summary>
+        public override string Name => "Create logical part groups";
 
         /// <summary>
         /// Get the 16x16 bitmap of the command
         /// </summary>
-        public override string Bitmap
-        {
-            get { return "Images.Commands.CreateLogicalGroups16x16.bmp"; }
-        }
+        public override string Bitmap => "Images.Commands.CreateLogicalGroups16x16.bmp";
 
         /// <summary>
         /// Get the 32x32 bitmap of the command
         /// </summary>
-        public override string LargeBitmap
-        {
-            get { return "Images.Commands.CreateLogicalGroups32x32.png"; }
-        }
+        public override string LargeBitmap => "Images.Commands.CreateLogicalGroups32x32.png";
 
         /// <summary>
         /// Get the command enabler
