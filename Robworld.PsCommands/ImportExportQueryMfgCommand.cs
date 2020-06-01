@@ -105,6 +105,9 @@ namespace Robworld.PsCommands
         #endregion
 
         #region Constructors
+        /// <summary>
+        /// Creates an instance of the command
+        /// </summary>
         public ImportExportQueryMfgCommand()
         {
             enabler = new RwEmsCommandEnabler();
