@@ -1,0 +1,24 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:tx="clr-namespace:Tecnomatix.Engineering.Ui.WPF;assembly=Tecnomatix.Engineering.Ui">
+
+    <Style TargetType="{x:Type Control}" x:Key="BaseStyle">
+        <Setter Property="FontWeight" Value="Normal" />
+    </Style>
+
+    <Style TargetType="{x:Type Control}" x:Key="BaseHighlightingStyle">
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+
+    <Style x:Key="BaseTextBlockStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="BaseHighlightingTextBlockStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+
+    <Style x:Key="HighlightingLabelStyle" TargetType="{x:Type Label}" BasedOn="{StaticResource BaseHighlightingStyle}" />
+    <Style x:Key="HighlightingTextBlockStyle" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseHighlightingTextBlockStyle}" />
+
+</ResourceDictionary>

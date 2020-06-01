@@ -1,0 +1,264 @@
+﻿<UserControl x:Class="Robworld.PsViewers.DeltaAxis.RwDeltaAxisView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:tx="clr-namespace:Tecnomatix.Engineering.Ui.WPF;assembly=Tecnomatix.Engineering.Ui"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Robworld.PsViewers.DeltaAxis"
+             mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Robworld.PsViewers;component/Styles/DefaultStyle.xaml" x:Name="Styles"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <UserControl.DataContext>
+        <local:RwDeltaAxisViewModel x:Name="ViewModel" />
+    </UserControl.DataContext>
+    
+    <Grid x:Name="GrdLayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="60" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="60" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="60" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="LblReferenceLoc1" 
+               Grid.Row="0" 
+               Grid.Column="0" 
+               Grid.ColumnSpan="2" 
+               HorizontalAlignment="Center"
+               Style="{StaticResource HighlightingLabelStyle}"
+               Content="{Binding CaptionLocation1}" />
+        <Label x:Name="LblReferenceLoc2" 
+               Grid.Row="0" 
+               Grid.Column="5" 
+               Grid.ColumnSpan="2" 
+               HorizontalAlignment="Center" 
+               Style="{StaticResource HighlightingLabelStyle}"
+               Content="{Binding CaptionLocation2}" />
+        <tx:TxObjEditBoxControl x:Name="TxObjectEditBox1" 
+                                Grid.Row="1" 
+                                Grid.Column="0" 
+                                Grid.ColumnSpan="2" 
+                                HorizontalAlignment="Stretch" 
+                                ListenToPick="True" 
+                                PickLevel="Entity" 
+                                Tag="1">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Picked">
+                    <i:InvokeCommandAction Command="{Binding LocationPickedEvent, Mode=OneWay}" 
+                                           CommandParameter="{Binding ElementName=TxObjectEditBox1}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </tx:TxObjEditBoxControl>
+        <tx:TxObjEditBoxControl x:Name="TxObjectEditBox2" 
+                                Grid.Row="1" 
+                                Grid.Column="5" 
+                                Grid.ColumnSpan="2" 
+                                HorizontalAlignment="Stretch" 
+                                ListenToPick="True" 
+                                PickLevel="Entity" 
+                                Tag="2">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Picked">
+                    <i:InvokeCommandAction Command="{Binding LocationPickedEvent, Mode=OneWay}" 
+                                           CommandParameter="{Binding ElementName=TxObjectEditBox2}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </tx:TxObjEditBoxControl>
+
+        <TextBlock x:Name="TblAxis1Position1" 
+                   Grid.Row="2" 
+                   Grid.Column="1" 
+                   HorizontalAlignment="Right"
+                   Style="{StaticResource BaseTextBlockStyle}"
+                   Text="{Binding Axis1ValueLocation1, StringFormat=\{0:F2\}}" />
+        <TextBlock x:Name="TblAxis1Delta" 
+                   Grid.Row="2" 
+                   Grid.Column="3" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource HighlightingTextBlockStyle}"
+                   Text="{Binding Axis1DeltaValue, StringFormat=\{0:F2\}}" />
+        <TextBlock x:Name="TblAxis1Position2" 
+                   Grid.Row="2" 
+                   Grid.Column="5" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource BaseTextBlockStyle}"
+                   Text="{Binding Axis1ValueLocation2, StringFormat=\{0:F2\}}" />
+
+        <TextBlock x:Name="TblAxis2Position1" 
+                   Grid.Row="3" 
+                   Grid.Column="1" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource BaseTextBlockStyle}"
+                   Text="{Binding Axis2ValueLocation1, StringFormat=\{0:F2\}}" />
+        <TextBlock x:Name="TblAxis2Delta" 
+                   Grid.Row="3" 
+                   Grid.Column="3" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource HighlightingTextBlockStyle}"
+                   Text="{Binding Axis2DeltaValue, StringFormat=\{0:F2\}}" />
+        <TextBlock x:Name="TblAxis2Position2" 
+                   Grid.Row="3" 
+                   Grid.Column="5" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource BaseTextBlockStyle}"
+                   Text="{Binding Axis2ValueLocation2, StringFormat=\{0:F2\}}" />
+
+        <TextBlock x:Name="TblAxis3Position1" 
+                   Grid.Row="4" 
+                   Grid.Column="1" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource BaseTextBlockStyle}"
+                   Text="{Binding Axis3ValueLocation1, StringFormat=\{0:F2\}}" />
+        <TextBlock x:Name="TblAxis3Delta" 
+                   Grid.Row="4" 
+                   Grid.Column="3" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource HighlightingTextBlockStyle}"
+                   Text="{Binding Axis3DeltaValue, StringFormat=\{0:F2\}}" />
+        <TextBlock x:Name="TblAxis3Position2" 
+                   Grid.Row="4" 
+                   Grid.Column="5" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource BaseTextBlockStyle}"
+                   Text="{Binding Axis3ValueLocation2, StringFormat=\{0:F2\}}" />
+
+        <TextBlock x:Name="TblAxis4Position1" 
+                   Grid.Row="5" 
+                   Grid.Column="1" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource BaseTextBlockStyle}"
+                   Text="{Binding Axis4ValueLocation1, StringFormat=\{0:F2\}}" />
+        <TextBlock x:Name="TblAxis4Delta" 
+                   Grid.Row="5" 
+                   Grid.Column="3" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource HighlightingTextBlockStyle}"
+                   Text="{Binding Axis4DeltaValue, StringFormat=\{0:F2\}}" />
+        <TextBlock x:Name="TblAxis4Position2" 
+                   Grid.Row="5" 
+                   Grid.Column="5" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource BaseTextBlockStyle}"
+                   Text="{Binding Axis4ValueLocation2, StringFormat=\{0:F2\}}" />
+
+        <TextBlock x:Name="TblAxis5Position1" 
+                   Grid.Row="6" 
+                   Grid.Column="1" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource BaseTextBlockStyle}"
+                   Text="{Binding Axis5ValueLocation1, StringFormat=\{0:F2\}}" />
+        <TextBlock x:Name="TblAxis5Delta" 
+                   Grid.Row="6" 
+                   Grid.Column="3" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource HighlightingTextBlockStyle}"
+                   Text="{Binding Axis5DeltaValue, StringFormat=\{0:F2\}}" />
+        <TextBlock x:Name="TblAxis5Position2" 
+                   Grid.Row="6" 
+                   Grid.Column="5" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource BaseTextBlockStyle}"
+                   Text="{Binding Axis5ValueLocation2, StringFormat=\{0:F2\}}" />
+
+        <TextBlock x:Name="TblAxis6Position1"
+                   Grid.Row="7" 
+                   Grid.Column="1" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource BaseTextBlockStyle}"
+                   Text="{Binding Axis6ValueLocation1, StringFormat=\{0:F2\}}" />
+        <TextBlock x:Name="TblAxis6Delta" 
+                   Grid.Row="7" 
+                   Grid.Column="3" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource HighlightingTextBlockStyle}"
+                   Text="{Binding Axis6DeltaValue, StringFormat=\{0:F2\}}" />
+        <TextBlock x:Name="TblAxis6Position2" 
+                   Grid.Row="7" 
+                   Grid.Column="5" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource BaseTextBlockStyle}"
+                   Text="{Binding Axis6ValueLocation2, StringFormat=\{0:F2\}}" />
+
+        <TextBlock x:Name="TblAxis7Position1" 
+                   Grid.Row="8" 
+                   Grid.Column="1" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource BaseTextBlockStyle}"
+                   Text="E11" />
+        <TextBlock x:Name="TblAxis7Delta" 
+                   Grid.Row="8" 
+                   Grid.Column="3" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource HighlightingTextBlockStyle}"
+                   Text="D7" />
+        <TextBlock x:Name="TblAxis7Position2" 
+                   Grid.Row="8" 
+                   Grid.Column="5" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource BaseTextBlockStyle}"
+                   Text="E12" />
+
+        <TextBlock x:Name="TblAxis8Position1" 
+                   Grid.Row="9" 
+                   Grid.Column="1" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource BaseTextBlockStyle}"
+                   Text="E21" />
+        <TextBlock x:Name="TblAxis8Delta" 
+                   Grid.Row="9" 
+                   Grid.Column="3" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource HighlightingTextBlockStyle}"
+                   Text="D8" />
+        <TextBlock x:Name="TblAxis8Position2" 
+                   Grid.Row="9" 
+                   Grid.Column="5" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource BaseTextBlockStyle}"
+                   Text="E22" />
+
+        <TextBlock x:Name="TblAxis9Position1" 
+                   Grid.Row="10" 
+                   Grid.Column="1" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource BaseTextBlockStyle}"
+                   Text="E31" />
+        <TextBlock x:Name="TblAxis9Delta" 
+                   Grid.Row="10" 
+                   Grid.Column="3" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource HighlightingTextBlockStyle}"
+                   Text="D9" />
+        <TextBlock x:Name="TblAxis9Position2" 
+                   Grid.Row="10" 
+                   Grid.Column="5" 
+                   HorizontalAlignment="Right" 
+                   Style="{StaticResource BaseTextBlockStyle}"
+                   Text="E32" />
+    </Grid>
+</UserControl>
