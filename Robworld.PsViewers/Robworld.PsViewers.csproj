@@ -19,7 +19,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>C:\Program Files\Tecnomatix_14.1\eMPower\DotNetViewers\Robworld\</OutputPath>
+    <OutputPath>C:\Program Files\Tecnomatix_15.1\eMPower\DotNetViewers\Robworld\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -75,19 +75,30 @@
     <AssemblyInfoVersionSettings>None.Increment.None.DayOfYearStamp</AssemblyInfoVersionSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EngineeringInternalExtension">
+      <HintPath>C:\Program Files\Tecnomatix_15.1\eMPower\EngineeringInternalExtension.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity">
-      <HintPath>C:\Program Files\Tecnomatix_15.1\eMPower\Robworld\System.Windows.Interactivity.dll</HintPath>
+      <HintPath>C:\Program Files\Tecnomatix_15.1\eMPower\System.Windows.Interactivity.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
     <Reference Include="Tecnomatix.Engineering">
       <HintPath>C:\Program Files\Tecnomatix_15.1\eMPower\Tecnomatix.Engineering.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Tecnomatix.Engineering.Olp">
+      <HintPath>C:\Program Files\Tecnomatix_15.1\eMPower\Tecnomatix.Engineering.Olp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Tecnomatix.Engineering.Ui">
@@ -103,6 +114,15 @@
     </Compile>
     <Compile Include="DeltaAxis\RwDeltaAxisViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoboticOperations\RoboticLocationViewModel.cs" />
+    <Compile Include="RoboticOperations\RwRoboticOperationsToolbar.xaml.cs">
+      <DependentUpon>RwRoboticOperationsToolbar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RoboticOperations\RwRoboticOperationView.xaml.cs">
+      <DependentUpon>RwRoboticOperationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RoboticOperations\RwRoboticOperationViewModel.cs" />
+    <Compile Include="RoboticOperationViewer.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -114,6 +134,46 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="DeltaAxis\RwDeltaAxisView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Resource Include="Images\Svg\AddFromPathEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Images\Svg\AddFromSelection.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Images\Svg\CheckAxisStatus.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Images\Svg\CheckCollisionStatus.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Images\Svg\CheckReachability.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Images\Svg\Gear.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Images\Svg\MsExcelLogo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Images\Svg\RemovePaths.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Include="RoboticOperations\RwRoboticOperationsToolbar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RoboticOperations\RwRoboticOperationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

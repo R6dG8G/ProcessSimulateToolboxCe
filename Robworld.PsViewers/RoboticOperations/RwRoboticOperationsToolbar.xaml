@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="Robworld.PsViewers.RoboticOperations.RwRoboticOperationsToolbar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d">
+
+    <DockPanel x:Name="DpToolbar" Grid.Row="0" LastChildFill="False">
+        <DockPanel.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.MergedDictionaries>
+                    <ResourceDictionary x:Name="AddFromSelectionImage" Source="pack://application:,,,/Robworld.PsViewers;component/Images/Svg/AddFromSelection.xaml" />
+                    <ResourceDictionary x:Name="AddFromPathEditorImage" Source="pack://application:,,,/Robworld.PsViewers;component/Images/Svg/AddFromPathEditor.xaml" />
+                    <ResourceDictionary x:Name="RemovePathsImage" Source="pack://application:,,,/Robworld.PsViewers;component/Images/Svg/RemovePaths.xaml" />
+                    <ResourceDictionary x:Name="ReachabilityImage" Source="pack://application:,,,/Robworld.PsViewers;component/Images/Svg/CheckReachability.xaml" />
+                    <ResourceDictionary x:Name="AxisStatusImage" Source="pack://application:,,,/Robworld.PsViewers;component/Images/Svg/CheckAxisStatus.xaml" />
+                    <ResourceDictionary x:Name="CollisionStatusImage" Source="pack://application:,,,/Robworld.PsViewers;component/Images/Svg/CheckCollisionStatus.xaml" />
+                    <ResourceDictionary x:Name="BindExcelImage" Source="pack://application:,,,/Robworld.PsViewers;component/Images/Svg/MsExcelLogo.xaml" />
+                    <ResourceDictionary x:Name="OptionsDialogImage" Source="pack://application:,,,/Robworld.PsViewers;component/Images/Svg/Gear.xaml" />
+                </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary>
+        </DockPanel.Resources>
+        <Button x:Name="BtnAddSelection" ToolTip="Add selected path(s)" Command="{Binding AddSelectedPathsToViewerCommand}">
+            <Image Height="32" Width="32" Source="{Binding Mode=OneWay, Source={StaticResource AddPathsFromSelectionDrawingImage}}" />
+        </Button>
+        <Button x:Name="BtnAddPathEditor" ToolTip="Add from PathEditor" Command="{Binding AddPathsFromPathEditorToViewerCommand}">
+            <Image Height="32" Width="32" Source="{Binding Mode=OneWay, Source={StaticResource AddPathsFromPathEditorDrawingImage}}" />
+        </Button>
+        <Button x:Name="BtnRemovePath" ToolTip="Remove path" Command="{Binding RemovePathsFromViewerCommand}">
+            <Image Height="32" Width="32" Source="{Binding Mode=OneWay, Source={StaticResource RemovePathsDrawingImage}}" />
+        </Button>
+        <Separator Margin="3,0"/>
+        <Button x:Name="BtnReachability" ToolTip="Check reachability" Command="{Binding ReachabilityCommand}">
+            <Image Height="32" Width="32" Source="{Binding Mode=OneWay, Source={StaticResource CheckReachabilityDrawingImage}}" />
+        </Button>
+        <Button x:Name="BtnAxisLimits" ToolTip="Check axis status" Command="{Binding AxisLimitsCommand}">
+            <Image Height="32" Width="32" Source="{Binding Mode=OneWay, Source={StaticResource CheckAxisLimitsDrawingImage}}" />
+        </Button>
+        <Button x:Name="BtnCollisionStatus" ToolTip="Check collision status" Command="{Binding CollisionStatusCommand}">
+            <Image Height="32" Width="32" Source="{Binding Mode=OneWay, Source={StaticResource CheckCollisionStatusDrawingImage}}" />
+        </Button>
+        <Separator Margin="3,0"/>
+        <Button x:Name="BtnExcelBinding" ToolTip="Bind to Excel" Command="{Binding BindToExcelCommand, Mode=OneWay}">
+            <Image Height="32" Width="32" Source="{Binding Mode=OneWay, Source={StaticResource MsExcelLogoDrawingImage}}" />
+        </Button>
+        <Button x:Name="BtnOptions" DockPanel.Dock="Right" ToolTip="Options" Command="{Binding ShowOptionsCommand, Mode=OneWay}">
+            <Image Height="32" Width="32" Source="{Binding Mode=OneWay, Source={StaticResource GearDrawingImage}}" />
+        </Button>
+    </DockPanel>
+</UserControl>
