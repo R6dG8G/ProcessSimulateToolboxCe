@@ -12,7 +12,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <AssemblyVersion>1.0.66.153</AssemblyVersion>
+    <AssemblyVersion>1.1.79.309</AssemblyVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -28,7 +28,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>c:\Program Files\Tecnomatix_15.1\eMPower\DotNetCommands\Robworld\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -43,10 +43,11 @@
     <InheritWinAppVersionFrom>None</InheritWinAppVersionFrom>
     <AssemblyFileVersionSettings>None.Increment.None.DayOfYearStamp</AssemblyFileVersionSettings>
     <AssemblyInfoVersionSettings>None.Increment.None.DayOfYearStamp</AssemblyInfoVersionSettings>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>C:\Program Files\Tecnomatix_14.1\eMPower\DotNetCommands\Robworld\</OutputPath>
+    <OutputPath>C:\Program Files\Tecnomatix_15.1\eMPower\DotNetCommands\Robworld\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
@@ -54,7 +55,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <OutputPath>C:\Program Files\Tecnomatix_14.1\eMPower\DotNetCommands\Robworld\</OutputPath>
+    <OutputPath>C:\Program Files\Tecnomatix_15.1\eMPower\DotNetCommands\Robworld\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
@@ -75,41 +76,45 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EMPAPPLICATIONLib">
-      <HintPath>C:\Program Files\Tecnomatix_14.1\eMPower\EMPAPPLICATIONLib.dll</HintPath>
+      <HintPath>C:\Program Files\Tecnomatix_15.1\eMPower\EMPAPPLICATIONLib.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <Private>False</Private>
     </Reference>
     <Reference Include="EMPMODELLib">
-      <HintPath>C:\Program Files\Tecnomatix_14.1\eMPower\EMPMODELLib.dll</HintPath>
+      <HintPath>C:\Program Files\Tecnomatix_15.1\eMPower\EMPMODELLib.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <Private>False</Private>
     </Reference>
     <Reference Include="EMPTYPELIBRARYLib">
-      <HintPath>C:\Program Files\Tecnomatix_14.1\eMPower\EMPTYPELIBRARYLib.dll</HintPath>
+      <HintPath>C:\Program Files\Tecnomatix_15.1\eMPower\EMPTYPELIBRARYLib.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <Private>False</Private>
     </Reference>
     <Reference Include="EngineeringInternalExtension">
-      <HintPath>C:\Program Files\Tecnomatix_14.1\eMPower\EngineeringInternalExtension.dll</HintPath>
+      <HintPath>C:\Program Files\Tecnomatix_15.1\eMPower\EngineeringInternalExtension.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="Robworld.PsPublicLibrary">
+      <HintPath>C:\Program Files\Tecnomatix_15.1\eMPower\Robworld.PsPublicLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity">
-      <HintPath>C:\Program Files\Tecnomatix_14.1\eMPower\Robworld\System.Windows.Interactivity.dll</HintPath>
+      <HintPath>C:\Program Files\Tecnomatix_15.1\eMPower\System.Windows.Interactivity.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System.Xaml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Tecnomatix.Engineering">
-      <HintPath>C:\Program Files\Tecnomatix_14.1\eMPower\Tecnomatix.Engineering.dll</HintPath>
+      <HintPath>C:\Program Files\Tecnomatix_15.1\eMPower\Tecnomatix.Engineering.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Tecnomatix.Engineering.Ui">
-      <HintPath>C:\Program Files\Tecnomatix_14.1\eMPower\Tecnomatix.Engineering.Ui.dll</HintPath>
+      <HintPath>C:\Program Files\Tecnomatix_15.1\eMPower\Tecnomatix.Engineering.Ui.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="WindowsBase" />
@@ -179,13 +184,6 @@
     <EmbeddedResource Include="Images\Commands\CreateLogicalGroups32x32.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Robworld.PsPublicLibrary\Robworld.PsPublicLibrary.csproj">
-      <Project>{d1a120b4-bf9c-4c54-ae4a-0c9947c959bf}</Project>
-      <Name>Robworld.PsPublicLibrary</Name>
-      <Private>False</Private>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Images\Commands\CreateFramesFromList16x16.bmp" />
     <EmbeddedResource Include="Images\Commands\CreateFramesFromList32x32.png" />
   </ItemGroup>
@@ -197,10 +195,10 @@
     <EmbeddedResource Include="Images\Commands\MfgQuery16x16.png" />
     <EmbeddedResource Include="Images\Commands\MfgQuery32x32.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Images\Commands\OpenMDD16x16.bmp" />
     <EmbeddedResource Include="Images\Commands\OpenMDD32x32.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

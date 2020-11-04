@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1022
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robworld.PsCommands", "Robworld.PsCommands\Robworld.PsCommands.csproj", "{1E3A3AAD-80F2-455D-B52F-40C691858487}"
 EndProject
@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robworld.PsPublicLibrary", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7820B03E-6C6D-4C98-903B-D4347AD70353}"
 	ProjectSection(SolutionItems) = preProject
-		C:\Program Files\Tecnomatix_14.1\eMPower\DotNetExternalApplications\RobworldPsToolboxCe.xml = C:\Program Files\Tecnomatix_14.1\eMPower\DotNetExternalApplications\RobworldPsToolboxCe.xml
+		C:\Program Files\Tecnomatix_15.1\eMPower\DotNetExternalApplications\RobworldPsToolboxCe.xml = C:\Program Files\Tecnomatix_15.1\eMPower\DotNetExternalApplications\RobworldPsToolboxCe.xml
 	EndProjectSection
 EndProject
 Global
@@ -40,45 +40,17 @@ Global
 		{F099A98A-0734-4661-B3F1-EF3E49DED7CC}.Release|x64.Build.0 = Release|x64
 		{D1A120B4-BF9C-4C54-AE4A-0C9947C959BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D1A120B4-BF9C-4C54-AE4A-0C9947C959BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D1A120B4-BF9C-4C54-AE4A-0C9947C959BF}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{D1A120B4-BF9C-4C54-AE4A-0C9947C959BF}.Debug|x64.Build.0 = Debug|Any CPU
+		{D1A120B4-BF9C-4C54-AE4A-0C9947C959BF}.Debug|x64.ActiveCfg = Debug|x64
+		{D1A120B4-BF9C-4C54-AE4A-0C9947C959BF}.Debug|x64.Build.0 = Debug|x64
 		{D1A120B4-BF9C-4C54-AE4A-0C9947C959BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1A120B4-BF9C-4C54-AE4A-0C9947C959BF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D1A120B4-BF9C-4C54-AE4A-0C9947C959BF}.Release|x64.ActiveCfg = Release|Any CPU
-		{D1A120B4-BF9C-4C54-AE4A-0C9947C959BF}.Release|x64.Build.0 = Release|Any CPU
+		{D1A120B4-BF9C-4C54-AE4A-0C9947C959BF}.Release|x64.ActiveCfg = Release|x64
+		{D1A120B4-BF9C-4C54-AE4A-0C9947C959BF}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A4F2FC2B-34E0-4C3A-B3F6-E21568358EBF}
-	EndGlobalSection
-	GlobalSection(AutomaticVersions) = postSolution
-		UpdateAssemblyVersion = True
-		UpdateAssemblyFileVersion = False
-		UpdateAssemblyInfoVersion = False
-		AssemblyVersionSettings = None.None.None.None
-		UpdatePackageVersion = False
-		AssemblyInfoVersionType = SettingsVersion
-		InheritWinAppVersionFrom = None
-		UpdateAssemblyVersion.Release|x64 = True
-		UpdateAssemblyFileVersion.Release|x64 = True
-		UpdateAssemblyInfoVersion.Release|x64 = True
-		AdvancedSettingsExpanded.Release|x64 = True
-		AssemblyVersionSettings.Release|x64 = None.Increment.None.DayOfYearStamp
-		AssemblyFileVersionSettings.Release|x64 = None.Increment.None.DayOfYearStamp
-		AssemblyInfoVersionSettings.Release|x64 = None.Increment.None.DayOfYearStamp
-		UpdatePackageVersion.Release|x64 = False
-		AssemblyInfoVersionType.Release|x64 = SettingsVersion
-		InheritWinAppVersionFrom.Release|x64 = None
-		UpdateAssemblyVersion.Release|Any CPU = True
-		UpdateAssemblyFileVersion.Release|Any CPU = True
-		UpdateAssemblyInfoVersion.Release|Any CPU = True
-		AssemblyVersionSettings.Release|Any CPU = None.Increment.None.DayOfYearStamp
-		AssemblyFileVersionSettings.Release|Any CPU = None.Increment.None.DayOfYearStamp
-		AssemblyInfoVersionSettings.Release|Any CPU = None.Increment.None.DayOfYearStamp
-		UpdatePackageVersion.Release|Any CPU = False
-		AssemblyInfoVersionType.Release|Any CPU = SettingsVersion
-		InheritWinAppVersionFrom.Release|Any CPU = None
 	EndGlobalSection
 EndGlobal
