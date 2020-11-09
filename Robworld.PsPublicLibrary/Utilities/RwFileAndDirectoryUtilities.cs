@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using Tecnomatix.Engineering;
 
 namespace Robworld.PsPublicLibrary.Utilities
 {
@@ -225,6 +226,19 @@ namespace Robworld.PsPublicLibrary.Utilities
             }
 
             return selectedDirectory;
+        }
+
+        /// <summary>
+        /// Converts an absolute path to a relative path of the SystemRoot
+        /// </summary>
+        /// <param name="fullAbsolutePath">The absolute path</param>
+        /// <returns>The relative path to the SystemRoot</returns>
+        public static string AbsoluteToRelativeLibraryPath(string fullAbsolutePath)
+        {
+            string absolutePath = Path.GetDirectoryName(fullAbsolutePath);
+            string sysRoot = TxApplication.SystemRootDirectoryNormalized;
+            string relativePath = absolutePath.Replace(sysRoot, "");
+            return relativePath;
         }
         #endregion
     }
