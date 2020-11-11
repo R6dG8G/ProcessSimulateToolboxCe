@@ -99,8 +99,14 @@ namespace Robworld.PsViewers.RoboticOperations
         {
             foreach (RoboticLocationViewModel location in locationOperations)
             {
-                double axisValue = -360 + random.NextDouble() * 720;
-                location.AxisLimitsResult = (Math.Abs(axisValue) <= 5.0 || Math.Abs(axisValue) >= 355.0) ? "nOk" : "Ok";
+                if (location.IsProcessLocation)
+                {
+                    location.CheckForAxisLimits();
+                }
+
+
+                //double axisValue = -360 + random.NextDouble() * 720;
+                //location.AxisLimitsResult = (Math.Abs(axisValue) <= 5.0 || Math.Abs(axisValue) >= 355.0) ? "nOk" : "Ok";
             }
         }
 
@@ -108,7 +114,10 @@ namespace Robworld.PsViewers.RoboticOperations
         {
             foreach (RoboticLocationViewModel location in locationOperations)
             {
-                location.CollisionStatusResult = "Ok";
+                if (location.IsProcessLocation)
+                {
+                    location.CheckForCollisions();
+                }
             }
         }
 

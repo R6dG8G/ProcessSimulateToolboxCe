@@ -47,7 +47,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>C:\Program Files\Tecnomatix_15.1\eMPower\DotNetViewers\Robworld\</OutputPath>
+    <OutputPath>C:\Program Files\Tecnomatix_14.1\eMPower\DotNetViewers\Robworld\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
@@ -55,7 +55,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <OutputPath>C:\Program Files\Tecnomatix_15.1\eMPower\DotNetViewers\Robworld\</OutputPath>
+    <OutputPath>C:\Program Files\Tecnomatix_14.1\eMPower\DotNetViewers\Robworld\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
