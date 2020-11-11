@@ -9,7 +9,17 @@ namespace Robworld.PsPublicLibrary.Utilities
     public static class RwMathUtilities
     {
         /// <summary>
-        /// Converts an angle fom radians to degrees
+        /// Returns the absolute value of a double
+        /// </summary>
+        /// <param name="value">The input value</param>
+        /// <returns>The absolute value of the input parameter</returns>
+        public static double Abs(double value)
+        {
+            return Math.Abs(value);
+        }
+
+        /// <summary>
+        /// Converts an angle from radians to degrees
         /// </summary>
         /// <param name="radians">Value in radians</param>
         /// <returns>The value in degrees</returns>
