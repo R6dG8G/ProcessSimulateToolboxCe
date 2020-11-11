@@ -19,6 +19,21 @@ namespace Robworld.PsPublicLibrary.Utilities
         }
 
         /// <summary>
+        /// Calculate the length of a 3D vector
+        /// </summary>
+        /// <param name="x">The x value</param>
+        /// <param name="y">The y value</param>
+        /// <param name="z">The z value</param>
+        /// <returns>The length of the vector</returns>
+        public static double Length(double x, double y, double z)
+        {
+            double xp = Math.Pow(x, 2.0);
+            double yp = Math.Pow(y, 2.0);
+            double zp = Math.Pow(z, 2.0);
+            return Math.Sqrt(xp + yp + zp);
+        }
+
+        /// <summary>
         /// Converts an angle from radians to degrees
         /// </summary>
         /// <param name="radians">Value in radians</param>
